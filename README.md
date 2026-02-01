@@ -1,16 +1,5 @@
 # 📘 TP B1-S2 : Des serveurs aux services
 
-> **Activité #1** : Découverte des configurations matérielles de serveurs.
-> Ce document présente l'analyse des facteurs de forme, des composants et de la redondance des équipements serveurs basés sur les gammes Dell PowerEdge.
-
----
-
-Voici le header et le sommaire, strictement adaptés au style visuel et structurel de l'exemple fourni, pour ton TP **"Des serveurs aux services"**.
-
----
-
-# `🖥️`︲Documentation TP : Des serveurs aux services (B1-S2).
-
 ---
 
 Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure matérielle des serveurs et la logique des services réseaux. Il couvre l'étude des facteurs de forme (Tour, Rack, Lame), la redondance matérielle, ainsi que la chaîne de services nécessaire à l'authentification d'un poste client sur un domaine.
