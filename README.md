@@ -115,6 +115,8 @@ graph TD
     style Step3 fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
+---
+
 > **Explication du flux :**
 > 1.  **Connectivité :** Le PC demande une IP au **DHCP** pour exister sur le réseau.
 > 2.  **Localisation :** Le PC demande au **DNS** l'adresse du serveur qui gère le domaine *DESCARTESBLEU*.
