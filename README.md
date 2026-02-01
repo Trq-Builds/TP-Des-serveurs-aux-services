@@ -5,6 +5,41 @@
 
 ---
 
+Voici le header et le sommaire, strictement adaptés au style visuel et structurel de l'exemple fourni, pour ton TP **"Des serveurs aux services"**.
+
+---
+
+# `🖥️`︲Documentation TP : Des serveurs aux services (B1-S2).
+
+---
+
+Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure matérielle des serveurs et la logique des services réseaux. Il couvre l'étude des facteurs de forme (Tour, Rack, Lame), la redondance matérielle, ainsi que la chaîne de services nécessaire à l'authentification d'un poste client sur un domaine.
+
+---
+
+## `📑`︲Sommaire (cliquez pour accéder directement à la section souhaitée)
+
+1. [`📘`︲Activité #1 : Découverte des configurations matérielles.](#1-facteurs-de-forme-form-factors)
+
+   * [`📐`︲Facteurs de forme (Tour, Rack, Lame) et Sockets.](#1-facteurs-de-forme-form-factors)
+   * [`⚡`︲Particularités électriques et Redondance.](#3-particularité-de-lalimentation)
+   * [`🧩`︲Architecture Serveur Lame et Châssis.](#6-serveur-lame-et-châssis-annexe-4)
+   * [`📊`︲Tableau comparatif des serveurs Dell PowerEdge.](#7-fiche-récapitulative-des-serveurs)
+
+   ---
+
+2. [`🌐`︲Activité #2 : Chaîne de services et connexion client.](#1-à-3-identification-des-services)
+
+   * [`🔍`︲Identification des protocoles (DHCP, DNS, AD).](#1-à-3-identification-des-services)
+   * [`🔄`︲Schématisation du flux d'authentification.](#4-schéma-de-lordre-dappel-des-services)
+   * [`📂`︲Services complémentaires en réseau local.](#5-autres-services-réseaux)
+
+   ---
+
+3. [`📚`︲Ressources et Annexes.](#annexes)
+
+---
+
 ## 1. Facteurs de forme (Form Factors)
 
 En analysant les annexes fournies, nous distinguons trois principaux facteurs de forme pour les serveurs :
