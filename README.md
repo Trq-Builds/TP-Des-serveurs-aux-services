@@ -139,9 +139,10 @@ Sans l’un d’eux, la connexion au domaine est **impossible**.
 * Traduction du nom de domaine (`DESCARTESBLEU`)
 * Résolution vers l’**adresse IP du contrôleur de domaine**
 
-💡 **Sans DNS** :
-➡️ Le poste ne sait pas **où se trouve le domaine**.
-➡️ L’authentification ne peut pas démarrer.
+> [!NOTE]
+> **Sans DNS** :
+> ➡️ Le poste ne sait pas **où se trouve le domaine**.
+> ➡️ L’authentification ne peut pas démarrer.
 
 ---
 
