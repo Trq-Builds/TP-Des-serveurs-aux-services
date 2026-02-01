@@ -29,7 +29,7 @@ Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure
 
 ---
 
-### **Activité #1 — Facteurs de forme (Form Factors)**
+### `📘`**︲Activité #1 : Découverte des configurations matérielles.**
 
 ---
 
