@@ -87,8 +87,8 @@ Le serveur **Lame** est un module compact inséré dans un **châssis commun**, 
 
 ---
 
-💡 **À retenir** :
-Le choix du facteur de forme dépend directement des **besoins en performance**, de la **scalabilité**, de la **redondance** et de l’**espace disponible**.
+> [!NOTE]
+> Le choix du facteur de forme dépend directement des **besoins en performance**, de la **scalabilité**, de la **redondance** et de l’**espace disponible**.
 
 ---
 
@@ -122,10 +122,11 @@ Sans l’un d’eux, la connexion au domaine est **impossible**.
   * Masque de sous-réseau
   * Passerelle par défaut
   * Serveur DNS
-
-💡 **Sans DHCP** :
-➡️ Le poste n’existe pas sur le réseau.
-➡️ Aucun échange réseau possible.
+  
+> [!NOTE]
+>  **Sans DHCP** :
+> ➡️ Le poste n’existe pas sur le réseau.
+> ➡️ Aucun échange réseau possible
 
 ---
 
@@ -160,9 +161,11 @@ Sans l’un d’eux, la connexion au domaine est **impossible**.
 * Attribution des droits et des stratégies (GPO)
 * Ouverture de la session utilisateur
 
-💡 **Sans Active Directory** :
-➡️ Pas d’authentification centralisée
-➡️ Pas de gestion des utilisateurs ni des droits
+> [!NOTE]
+>  **Sans Active Directory** :
+> ➡️ Pas d’authentification centralisée
+> ➡️ Pas de gestion des utilisateurs ni des droits
+
 
 ---
 
@@ -217,9 +220,10 @@ mais **indispensables au fonctionnement quotidien** du poste.
 
 ---
 
-**À retenir** :
-La connexion à un domaine repose sur une **chaîne de dépendances**.
-**DHCP → DNS → Active Directory**
-Un maillon cassé = **connexion impossible**.
+> [!TIP]
+> La connexion à un domaine repose sur une **chaîne de dépendances**.
+> **DHCP → DNS → Active Directory**
+> Un maillon cassé = **connexion impossible**. :
+
 
 ---
