@@ -92,34 +92,82 @@ Le choix du facteur de forme dépend directement des **besoins en performance**,
 
 ---
 
-🔁 **À toi** :
-👉 Dis-moi **la prochaine question** à réécrire (socket, alimentation, redondance, services, etc.).
-On déroule proprement, sans précipitation.
+## `🌐`︲Activité #2 — Chaîne de services lors de la connexion d’un poste client
 
----
----
----
+Cette activité vise à identifier et comprendre la **chaîne de services réseau** sollicitée lorsqu’un poste client démarre et qu’un utilisateur s’authentifie sur un **domaine Windows**
+*(exemple : `DESCARTESBLEU`)*.
 
-> **Activité #2** : Les services requis lors de la connexion d'un poste client.
-> Cette section analyse la **chaîne de services** sollicitée lorsqu'un utilisateur s'authentifie sur un domaine Windows (ex: *DESCARTESBLEU*).
+L’objectif est simple :
+👉 **comprendre qui fait quoi, dans quel ordre, et pourquoi**.
 
 ---
 
-## 1 à 3. Identification des Services
+## `🔍`︲Identification des services essentiels (1 à 3)
 
-Pour ouvrir une session sur le réseau, trois services fondamentaux interviennent successivement. Voici le détail technique de chacun :
-
-| ID | Description de la demande | Service Identifié | Protocole & Port | Rôle Technique |
-| :--- | :--- | :--- | :--- | :--- |
-| **1** | Inscription et identification unique sur le réseau. | **DHCP**<br>(Dynamic Host Configuration Protocol) | **UDP**<br>Ports 67 (Serveur) & 68 (Client) | Distribue automatiquement une configuration IP (Adresse IP, Masque, Passerelle, DNS) pour que la machine puisse communiquer sur le réseau. |
-| **2** | Reconnaissance du domaine *DESCARTESBLEU*. | **DNS**<br>(Domain Name System) | **UDP / TCP**<br>Port 53 | Assure la **résolution de noms**. Il traduit le nom de domaine (littéral) en adresse IP (numérique) pour localiser le contrôleur de domaine. |
-| **3** | Authentification de l'utilisateur (Login/Mdp). | **Active Directory / LDAP**<br>(Lightweight Directory Access Protocol) | **TCP / UDP**<br>Port 389 (LDAP) ou 88 (Kerberos) | Service d'annuaire centralisé. Il vérifie les identifiants (couple utilisateur/mot de passe) et accorde les droits d'accès. |
+Lors de l’ouverture de session, **trois services fondamentaux** interviennent **successivement**.
+Sans l’un d’eux, la connexion au domaine est **impossible**.
 
 ---
 
-## 4. Schéma de l'ordre d'appel des services
+### `1️⃣`︲DHCP — Attribution de l’identité réseau
 
-Lorsqu'un ordinateur démarre et qu'un utilisateur tente de se connecter, l'ordre chronologique des appels est le suivant :
+📌 **Service :** DHCP *(Dynamic Host Configuration Protocol)*
+📡 **Protocole :** UDP — Ports **67 (serveur)** / **68 (client)**
+
+🔧 **Rôle technique :**
+
+* Attribution automatique d’une **adresse IP**
+* Fourniture des paramètres réseau essentiels :
+
+  * Masque de sous-réseau
+  * Passerelle par défaut
+  * Serveur DNS
+
+💡 **Sans DHCP** :
+➡️ Le poste n’existe pas sur le réseau.
+➡️ Aucun échange réseau possible.
+
+---
+
+### `2️⃣`︲DNS — Localisation du domaine
+
+📌 **Service :** DNS *(Domain Name System)*
+📡 **Protocole :** UDP / TCP — Port **53**
+
+🔧 **Rôle technique :**
+
+* Traduction du nom de domaine (`DESCARTESBLEU`)
+* Résolution vers l’**adresse IP du contrôleur de domaine**
+
+💡 **Sans DNS** :
+➡️ Le poste ne sait pas **où se trouve le domaine**.
+➡️ L’authentification ne peut pas démarrer.
+
+---
+
+### `3️⃣`︲Active Directory — Authentification de l’utilisateur
+
+📌 **Service :** Active Directory
+📡 **Protocoles associés :**
+
+* **LDAP** — Port **389**
+* **Kerberos** — Port **88**
+
+🔧 **Rôle technique :**
+
+* Vérification du couple **utilisateur / mot de passe**
+* Attribution des droits et des stratégies (GPO)
+* Ouverture de la session utilisateur
+
+💡 **Sans Active Directory** :
+➡️ Pas d’authentification centralisée
+➡️ Pas de gestion des utilisateurs ni des droits
+
+---
+
+## `🔄`︲Ordre chronologique d’appel des services
+
+L’ordre d’appel est **strict** et **non négociable** :
 
 ```mermaid
 graph TD
@@ -140,21 +188,48 @@ graph TD
 
 ---
 
-> **Explication du flux :**
-> 1.  **Connectivité :** Le PC demande une IP au **DHCP** pour exister sur le réseau.
-> 2.  **Localisation :** Le PC demande au **DNS** l'adresse du serveur qui gère le domaine *DESCARTESBLEU*.
-> 3.  **Authentification :** Le PC contacte le serveur identifié (**AD**) pour vérifier le mot de passe.
+### `🧠`︲Lecture du flux
+
+1. **Connectivité**
+   👉 Le poste obtient une configuration IP via **DHCP**
+
+2. **Localisation**
+   👉 Le poste interroge le **DNS** pour trouver le domaine
+
+3. **Authentification**
+   👉 Le poste contacte l’**Active Directory** pour valider l’utilisateur
 
 ---
 
-## 5. Autres services réseaux
+## `📂`︲Services réseaux complémentaires (post-authentification)
 
-Dans un environnement réseau local d'entreprise (LAN), une fois l'utilisateur connecté, d'autres services sont couramment utilisés :
+Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un environnement LAN :
 
-*   **Serveur de Fichiers (SMB/CIFS) :** Pour le partage de documents communs ou de répertoires personnels (*Port 445*).
-*   **Serveur d'Impression :** Pour gérer les files d'attente et les pilotes des imprimantes partagées.
-*   **Serveur de Temps (NTP) :** Pour synchroniser l'heure de toutes les machines (crucial pour la sécurité Kerberos, *Port 123*).
-*   **Proxy / Filtrage Web :** Pour sécuriser et contrôler l'accès à Internet.
-*   **Service de déploiement (WDS/FOG) :** Pour installer des systèmes d'exploitation sur les postes à travers le réseau.
+* 📁 **Serveur de fichiers (SMB/CIFS)** — Port **445**
+* 🖨️ **Serveur d’impression**
+* ⏱️ **Serveur de temps (NTP)** — Port **123**
+* 🌐 **Proxy / filtrage web**
+* 🚀 **Service de déploiement** *(WDS / FOG)*
+
+💡 Ces services ne sont **pas nécessaires à la connexion**,
+mais **indispensables au fonctionnement quotidien** du poste.
+
+---
+
+✅ **À retenir** :
+La connexion à un domaine repose sur une **chaîne de dépendances**.
+👉 **DHCP → DNS → Active Directory**
+Un maillon cassé = **connexion impossible**.
+
+---
+
+🔥 Prochaine étape quand tu veux :
+
+* tableau synthèse ultra FOG
+* ou passage à une **annexe / récap visuel**
+* ou on continue l’alignement global de la doc
+
+Dis-moi la suite.
+
 
 ---
