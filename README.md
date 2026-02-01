@@ -77,10 +77,6 @@ La redondance vise à assurer la **Haute Disponibilité** (High Availability) et
 
 ---
 
-Voici la suite du TP correspondant à l'**Activité #2**, formatée avec le même style pour assurer la continuité sur ton dépôt GitHub.
-
-***
-
 > **Activité #2** : Les services requis lors de la connexion d'un poste client.
 > Cette section analyse la **chaîne de services** sollicitée lorsqu'un utilisateur s'authentifie sur un domaine Windows (ex: *DESCARTESBLEU*).
 
