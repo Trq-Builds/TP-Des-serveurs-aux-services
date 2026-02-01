@@ -222,14 +222,3 @@ La connexion à un domaine repose sur une **chaîne de dépendances**.
 Un maillon cassé = **connexion impossible**.
 
 ---
-
-🔥 Prochaine étape quand tu veux :
-
-* tableau synthèse ultra FOG
-* ou passage à une **annexe / récap visuel**
-* ou on continue l’alignement global de la doc
-
-Dis-moi la suite.
-
-
----
