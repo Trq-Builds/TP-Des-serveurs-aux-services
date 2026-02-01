@@ -131,3 +131,5 @@ Dans un environnement réseau local d'entreprise (LAN), une fois l'utilisateur c
 *   **Serveur de Temps (NTP) :** Pour synchroniser l'heure de toutes les machines (crucial pour la sécurité Kerberos, *Port 123*).
 *   **Proxy / Filtrage Web :** Pour sécuriser et contrôler l'accès à Internet.
 *   **Service de déploiement (WDS/FOG) :** Pour installer des systèmes d'exploitation sur les postes à travers le réseau.
+
+---
