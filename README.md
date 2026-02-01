@@ -211,14 +211,14 @@ Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un e
 * 🌐 **Proxy / filtrage web**
 * 🚀 **Service de déploiement** *(WDS / FOG)*
 
-💡 Ces services ne sont **pas nécessaires à la connexion**,
+Ces services ne sont **pas nécessaires à la connexion**,
 mais **indispensables au fonctionnement quotidien** du poste.
 
 ---
 
-✅ **À retenir** :
+**À retenir** :
 La connexion à un domaine repose sur une **chaîne de dépendances**.
-👉 **DHCP → DNS → Active Directory**
+**DHCP → DNS → Active Directory**
 Un maillon cassé = **connexion impossible**.
 
 ---
