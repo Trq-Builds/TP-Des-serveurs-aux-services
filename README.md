@@ -74,3 +74,64 @@ La redondance vise à assurer la **Haute Disponibilité** (High Availability) et
 *   **Mémoire (RAM) :** Les technologies comme l'ECC (Error Correcting Code) ou le "Memory Mirroring" permettent de corriger les erreurs de données ou de copier les données sur deux barrettes simultanément pour éviter les écrans bleus (crashs).
 *   **Stockage (Disques) :** L'utilisation du **RAID** (ex: RAID 1, RAID 5) permet de continuer à accéder aux données même si un ou plusieurs disques durs tombent en panne physiquement.
 *   **Alimentation :** Assure la continuité de service électrique. Si un bloc d'alimentation grille ou si un câble est débranché accidentellement, le serveur reste allumé sur le second bloc.
+
+---
+
+Voici la suite du TP correspondant à l'**Activité #2**, formatée avec le même style pour assurer la continuité sur ton dépôt GitHub.
+
+***
+
+> **Activité #2** : Les services requis lors de la connexion d'un poste client.
+> Cette section analyse la **chaîne de services** sollicitée lorsqu'un utilisateur s'authentifie sur un domaine Windows (ex: *DESCARTESBLEU*).
+
+---
+
+## 1 à 3. Identification des Services
+
+Pour ouvrir une session sur le réseau, trois services fondamentaux interviennent successivement. Voici le détail technique de chacun :
+
+| ID | Description de la demande | Service Identifié | Protocole & Port | Rôle Technique |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | Inscription et identification unique sur le réseau. | **DHCP**<br>(Dynamic Host Configuration Protocol) | **UDP**<br>Ports 67 (Serveur) & 68 (Client) | Distribue automatiquement une configuration IP (Adresse IP, Masque, Passerelle, DNS) pour que la machine puisse communiquer sur le réseau. |
+| **2** | Reconnaissance du domaine *DESCARTESBLEU*. | **DNS**<br>(Domain Name System) | **UDP / TCP**<br>Port 53 | Assure la **résolution de noms**. Il traduit le nom de domaine (littéral) en adresse IP (numérique) pour localiser le contrôleur de domaine. |
+| **3** | Authentification de l'utilisateur (Login/Mdp). | **Active Directory / LDAP**<br>(Lightweight Directory Access Protocol) | **TCP / UDP**<br>Port 389 (LDAP) ou 88 (Kerberos) | Service d'annuaire centralisé. Il vérifie les identifiants (couple utilisateur/mot de passe) et accorde les droits d'accès. |
+
+---
+
+## 4. Schéma de l'ordre d'appel des services
+
+Lorsqu'un ordinateur démarre et qu'un utilisateur tente de se connecter, l'ordre chronologique des appels est le suivant :
+
+```mermaid
+graph TD
+    Client[Poste Client]
+    
+    subgraph "Chaîne de Services"
+    Step1(1. DHCP) -->|Attribution IP| Client
+    Client -->|2. Requête: Où est DESCARTESBLEU ?| Step2(2. DNS)
+    Step2 -->|Réponse: IP du Contrôleur| Client
+    Client -->|3. Envoi identifiants| Step3(3. Active Directory)
+    Step3 -->|Validation & Ouverture Session| Client
+    end
+    
+    style Step1 fill:#f9f,stroke:#333,stroke-width:2px
+    style Step2 fill:#bbf,stroke:#333,stroke-width:2px
+    style Step3 fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+> **Explication du flux :**
+> 1.  **Connectivité :** Le PC demande une IP au **DHCP** pour exister sur le réseau.
+> 2.  **Localisation :** Le PC demande au **DNS** l'adresse du serveur qui gère le domaine *DESCARTESBLEU*.
+> 3.  **Authentification :** Le PC contacte le serveur identifié (**AD**) pour vérifier le mot de passe.
+
+---
+
+## 5. Autres services réseaux
+
+Dans un environnement réseau local d'entreprise (LAN), une fois l'utilisateur connecté, d'autres services sont couramment utilisés :
+
+*   **Serveur de Fichiers (SMB/CIFS) :** Pour le partage de documents communs ou de répertoires personnels (*Port 445*).
+*   **Serveur d'Impression :** Pour gérer les files d'attente et les pilotes des imprimantes partagées.
+*   **Serveur de Temps (NTP) :** Pour synchroniser l'heure de toutes les machines (crucial pour la sécurité Kerberos, *Port 123*).
+*   **Proxy / Filtrage Web :** Pour sécuriser et contrôler l'accès à Internet.
+*   **Service de déploiement (WDS/FOG) :** Pour installer des systèmes d'exploitation sur les postes à travers le réseau.
