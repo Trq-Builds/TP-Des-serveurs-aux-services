@@ -24,10 +24,12 @@ Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure
 
 ---
 
+<a id=""></a>
 ## `📘`︲Activité #1 : Découverte des configurations matérielles.
 
 ---
 
+<a id=""></a>
 ## `📐`︲Facteurs de forme des serveurs (Tour, Rack, Lame)
 
 Dans une infrastructure serveur, le **facteur de forme** définit le **format physique**, le **mode d’intégration** et les **cas d’usage** du matériel. 
@@ -69,6 +71,7 @@ Le serveur **Lame** est un module compact inséré dans un **châssis commun**, 
 
 ---
 
+<a id=""></a>
 ### 🔧 Précisions Techniques (Q2 à Q5)
 
 * **Le Socket (Q2) :** Il s'agit de l'emplacement physique sur la carte mère destiné à accueillir un processeur (CPU). Le nombre de sockets détermine la capacité d'évolution du serveur : un serveur "2 sockets" peut fonctionner avec un seul CPU au départ, puis en recevoir un deuxième plus tard pour doubler sa puissance de calcul.
@@ -78,6 +81,7 @@ Le serveur **Lame** est un module compact inséré dans un **châssis commun**, 
 
 ---
 
+<a id=""></a>
 ### `🧩` L'écosystème du Serveur Lame (Q6)
 
 Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctionner seule. Elle doit être insérée dans un **châssis**.
@@ -91,6 +95,7 @@ Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctio
 
 ---
 
+<a id=""></a>
 ### `📊` Fiche récapitulative des serveurs (Q7)
 
 | Caractéristique | Annexe 1 : T140 | Annexe 2 : T440 | Annexe 3 : R240 | Annexe 4 : M830 |
@@ -104,6 +109,7 @@ Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctio
 
 ---
 
+<a id=""></a>
 ### `🛡️` Stratégies de Redondance (Q8)
 
 La redondance est la capacité d'un système à continuer de fonctionner malgré la défaillance d'un ou plusieurs de ses composants.
@@ -116,12 +122,14 @@ La redondance est la capacité d'un système à continuer de fonctionner malgré
 
 ---
 
+<a id=""></a>
 ## `🌐`︲Activité #2  Chaîne de services lors de la connexion d’un poste client
 
 Cette activité vise à identifier et comprendre la **chaîne de services réseau** sollicitée lorsqu’un poste client démarre et qu’un utilisateur s’authentifie sur un **domaine Windows**.
 
 ---
 
+<a id=""></a>
 ## `🔍`︲Identification des services essentiels (1 à 3)
 
 ### `1️⃣`︲DHCP  Attribution de l’identité réseau
@@ -131,6 +139,9 @@ Cette activité vise à identifier et comprendre la **chaîne de services résea
 > [!NOTE]
 > **Sans DHCP** : Le poste n’existe pas sur le réseau. Aucun échange possible.
 
+---
+
+<a id=""></a>
 ### `2️⃣`︲DNS  Localisation du domaine
 📌 **Service :** DNS *(Domain Name System)*
 📡 **Protocole :** UDP / TCP  Port **53**
@@ -138,6 +149,9 @@ Cette activité vise à identifier et comprendre la **chaîne de services résea
 > [!NOTE]
 > **Sans DNS** : Le poste ne sait pas **où se trouve le domaine**. L’authentification ne peut pas démarrer.
 
+---
+
+<a id=""></a>
 ### `3️⃣`︲Active Directory  Authentification de l’utilisateur
 📌 **Service :** Active Directory
 📡 **Protocoles associés :** LDAP (389) / Kerberos (88)
@@ -171,6 +185,7 @@ graph TD
 
 ---
 
+<a id=""></a>
 ## `📂`︲Services réseaux complémentaires (post-authentification)
 
 Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un environnement LAN :
