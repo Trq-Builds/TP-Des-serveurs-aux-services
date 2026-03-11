@@ -74,6 +74,17 @@ Le serveur **Rack** est conçu pour être installé horizontalement dans une **b
 
 ### `🧩`︲Serveur **Lame (Blade)**
 
+### 🧩 L'écosystème du Serveur Lame (Q6)
+
+Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctionner seule. Elle doit être insérée dans un **châssis**.
+
+* **Rôle du Châssis (Q6.a) :** Le châssis fait office de "colonne vertébrale". Il mutualise les ressources pour toutes les lames qu'il héberge :
+    * **Énergie :** Alimentations partagées de forte puissance.
+    * **Refroidissement :** Ventilation commune pour tout le châssis.
+    * **Connectivité :** Switches réseau et stockage intégrés à l'arrière du châssis.
+    * **Gestion :** Interface d'administration centralisée pour toutes les lames.
+* **Nombre d'alimentations (Q6.b) :** Sur ce type d'équipement (comme le châssis Dell PowerEdge M1000e), on trouve généralement jusqu'à **6 blocs d'alimentation** haute efficacité pour garantir une redondance totale même en cas de panne de plusieurs sources électriques.
+
 Le serveur **Lame** est un module compact inséré dans un **châssis commun**, qui mutualise les ressources critiques.
 
 * ⚡ Alimentation partagée
