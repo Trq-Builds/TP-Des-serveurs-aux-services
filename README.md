@@ -24,12 +24,12 @@ Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure
 
 ---
 
-<a id=""></a>
+<a id="-activité-1--découverte-des-configurations-matérielles"></a>
 ## `📘`︲Activité #1 : Découverte des configurations matérielles.
 
 ---
 
-<a id=""></a>
+<a id="-facteurs-de-forme-des-serveurs-tour-rack-lame"></a>
 ## `📐`︲Facteurs de forme des serveurs (Tour, Rack, Lame)
 
 Dans une infrastructure serveur, le **facteur de forme** définit le **format physique**, le **mode d’intégration** et les **cas d’usage** du matériel. 
@@ -71,7 +71,7 @@ Le serveur **Lame** est un module compact inséré dans un **châssis commun**, 
 
 ---
 
-<a id=""></a>
+<a id="-précisions-techniques-q2-à-q5"></a>
 ### 🔧 Précisions Techniques (Q2 à Q5)
 
 * **Le Socket (Q2) :** Il s'agit de l'emplacement physique sur la carte mère destiné à accueillir un processeur (CPU). Le nombre de sockets détermine la capacité d'évolution du serveur : un serveur "2 sockets" peut fonctionner avec un seul CPU au départ, puis en recevoir un deuxième plus tard pour doubler sa puissance de calcul.
@@ -81,7 +81,7 @@ Le serveur **Lame** est un module compact inséré dans un **châssis commun**, 
 
 ---
 
-<a id=""></a>
+<a id="-lecosystème-du-serveur-lame-q6"></a>
 ### `🧩` L'écosystème du Serveur Lame (Q6)
 
 Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctionner seule. Elle doit être insérée dans un **châssis**.
@@ -95,7 +95,7 @@ Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctio
 
 ---
 
-<a id=""></a>
+<a id="-fiche-récapitulative-des-serveurs-q7"></a>
 ### `📊` Fiche récapitulative des serveurs (Q7)
 
 | Caractéristique | Annexe 1 : T140 | Annexe 2 : T440 | Annexe 3 : R240 | Annexe 4 : M830 |
@@ -109,7 +109,7 @@ Le serveur Dell PowerEdge M830 (Annexe 4) est une "lame" qui ne peut pas fonctio
 
 ---
 
-<a id=""></a>
+<a id="-stratégies-de-redondance-q8"></a>
 ### `🛡️` Stratégies de Redondance (Q8)
 
 La redondance est la capacité d'un système à continuer de fonctionner malgré la défaillance d'un ou plusieurs de ses composants.
