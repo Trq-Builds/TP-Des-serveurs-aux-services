@@ -122,14 +122,14 @@ La redondance est la capacité d'un système à continuer de fonctionner malgré
 
 ---
 
-<a id=""></a>
+<a id="-activité-2--chaîne-de-services-lors-de-la-connexion-dun-poste-client"></a>
 ## `🌐`︲Activité #2  Chaîne de services lors de la connexion d’un poste client
 
 Cette activité vise à identifier et comprendre la **chaîne de services réseau** sollicitée lorsqu’un poste client démarre et qu’un utilisateur s’authentifie sur un **domaine Windows**.
 
 ---
 
-<a id=""></a>
+<a id="-identification-des-services-essentiels-1-à-3"></a>
 ## `🔍`︲Identification des services essentiels (1 à 3)
 
 ### `1️⃣`︲DHCP  Attribution de l’identité réseau
@@ -141,7 +141,7 @@ Cette activité vise à identifier et comprendre la **chaîne de services résea
 
 ---
 
-<a id=""></a>
+<a id="-ordre-chronologique-dappel-des-services"></a>
 ### `2️⃣`︲DNS  Localisation du domaine
 📌 **Service :** DNS *(Domain Name System)*
 📡 **Protocole :** UDP / TCP  Port **53**
@@ -151,7 +151,6 @@ Cette activité vise à identifier et comprendre la **chaîne de services résea
 
 ---
 
-<a id=""></a>
 ### `3️⃣`︲Active Directory  Authentification de l’utilisateur
 📌 **Service :** Active Directory
 📡 **Protocoles associés :** LDAP (389) / Kerberos (88)
@@ -185,7 +184,7 @@ graph TD
 
 ---
 
-<a id=""></a>
+<a id="-services-réseaux-complémentaires-post-authentification"></a>
 ## `📂`︲Services réseaux complémentaires (post-authentification)
 
 Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un environnement LAN :
@@ -200,3 +199,5 @@ Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un e
 > La connexion à un domaine repose sur une **chaîne de dépendances**.
 > **DHCP → DNS → Active Directory**
 > Un maillon cassé = **connexion impossible**.
+
+---
