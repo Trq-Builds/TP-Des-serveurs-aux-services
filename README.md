@@ -261,3 +261,13 @@ Ce tableau compare les configurations maximales extraites des documents techniqu
 | **Nb. Alimentations** | 1 (365W) | 2 (Redondantes) | 2 (Redondantes) | Via Châssis (Redon.) |
 
 ---
+
+### 🛡️ Stratégies de Redondance (Q8)
+
+La redondance est la capacité d'un système à continuer de fonctionner malgré la défaillance d'un ou plusieurs de ses composants. Voici comment elle s'applique :
+
+* **Alimentation :** Utilisation de deux blocs (ou plus). Si l'un grille ou si une ligne électrique est coupée, le second prend le relais instantanément (High Availability).
+* **Disques durs (Stockage) :** Mise en place du **RAID** (ex: RAID 1, 5 ou 10). Les données sont dupliquées sur plusieurs disques. Si un disque meurt, les données restent accessibles sur les autres.
+* **Processeur (CPU) :** Sur les serveurs multi-sockets, la charge est répartie. Si un CPU surchauffe ou échoue, le système peut (selon la configuration) continuer de tourner sur les processeurs restants.
+* **Mémoire (RAM) :** Utilisation de barrettes **ECC** (Error Correcting Code) qui détectent et corrigent les erreurs de données à la volée, évitant les "écrans bleus" et les crashs système.
+* **Ventilation :** Présence de ventilateurs extractibles à chaud. Si l'un s'arrête, les autres augmentent leur vitesse pour compenser en attendant le remplacement.
