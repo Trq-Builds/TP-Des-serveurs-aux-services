@@ -33,6 +33,14 @@ Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure
 
 ---
 
+### 🔧 Précisions Techniques (Q2 à Q5)
+
+* **Le Socket (Q2) :** Il s'agit de l'emplacement physique sur la carte mère destiné à accueillir un processeur (CPU). Le nombre de sockets détermine la capacité d'évolution du serveur : un serveur "2 sockets" peut fonctionner avec un seul CPU au départ, puis en recevoir un deuxième plus tard pour doubler sa puissance de calcul.
+* **Particularité de l'alimentation (Q3) :** Contrairement à un PC client, un serveur dispose d'une **alimentation redondante** (deux blocs ou plus). Ces blocs sont **extractibles à chaud (Hot-Plug)**, permettant de remplacer une alimentation défectueuse sans éteindre le serveur.
+* **Stockage des serveurs Rack (Q4) :** Pour installer des serveurs au format Rack, on utilise une **baie informatique (ou armoire 19 pouces)**. Elle permet de centraliser le matériel, d'optimiser le câblage et de garantir un flux d'air de refroidissement efficace.
+* **Signification du format 1U (Q5) :** Le "U" signifie **Unité de rack**. C'est une unité de mesure standardisée pour la hauteur des équipements. **1U = 1,75 pouce (soit environ 4,445 cm)**. Un serveur 1U est donc très plat, tandis qu'un serveur 2U prendra deux fois plus de place en hauteur dans la baie.
+
+
 ## `📐`︲Facteurs de forme des serveurs (Tour, Rack, Lame)
 
 Dans une infrastructure serveur, le **facteur de forme** définit le **format physique**, le **mode d’intégration** et les **cas d’usage** du matériel.
