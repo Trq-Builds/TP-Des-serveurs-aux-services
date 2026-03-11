@@ -116,7 +116,7 @@ La redondance est la capacité d'un système à continuer de fonctionner malgré
 
 ---
 
-## `🌐`︲Activité #2 — Chaîne de services lors de la connexion d’un poste client
+## `🌐`︲Activité #2  Chaîne de services lors de la connexion d’un poste client
 
 Cette activité vise à identifier et comprendre la **chaîne de services réseau** sollicitée lorsqu’un poste client démarre et qu’un utilisateur s’authentifie sur un **domaine Windows**.
 
@@ -124,21 +124,21 @@ Cette activité vise à identifier et comprendre la **chaîne de services résea
 
 ## `🔍`︲Identification des services essentiels (1 à 3)
 
-### `1️⃣`︲DHCP — Attribution de l’identité réseau
+### `1️⃣`︲DHCP  Attribution de l’identité réseau
 📌 **Service :** DHCP *(Dynamic Host Configuration Protocol)*
-📡 **Protocole :** UDP — Ports **67 (serveur)** / **68 (client)**
+📡 **Protocole :** UDP  Ports **67 (serveur)** / **68 (client)**
 🔧 **Rôle technique :** Attribution automatique d’une adresse IP, masque, passerelle et serveur DNS.
 > [!NOTE]
 > **Sans DHCP** : Le poste n’existe pas sur le réseau. Aucun échange possible.
 
-### `2️⃣`︲DNS — Localisation du domaine
+### `2️⃣`︲DNS  Localisation du domaine
 📌 **Service :** DNS *(Domain Name System)*
-📡 **Protocole :** UDP / TCP — Port **53**
+📡 **Protocole :** UDP / TCP  Port **53**
 🔧 **Rôle technique :** Traduction du nom de domaine (`DESCARTESBLEU`) vers l’adresse IP du contrôleur de domaine.
 > [!NOTE]
 > **Sans DNS** : Le poste ne sait pas **où se trouve le domaine**. L’authentification ne peut pas démarrer.
 
-### `3️⃣`︲Active Directory — Authentification de l’utilisateur
+### `3️⃣`︲Active Directory  Authentification de l’utilisateur
 📌 **Service :** Active Directory
 📡 **Protocoles associés :** LDAP (389) / Kerberos (88)
 🔧 **Rôle technique :** Vérification du couple utilisateur / mot de passe et attribution des droits.
@@ -175,9 +175,9 @@ graph TD
 
 Une fois l’utilisateur connecté, d’autres services entrent en jeu dans un environnement LAN :
 
-* 📁 **Serveur de fichiers (SMB/CIFS)** — Port **445**
+* 📁 **Serveur de fichiers (SMB/CIFS)**  Port **445**
 * 🖨️ **Serveur d’impression**
-* ⏱️ **Serveur de temps (NTP)** — Port **123**
+* ⏱️ **Serveur de temps (NTP)**  Port **123**
 * 🌐 **Proxy / filtrage web**
 * 🚀 **Service de déploiement** *(WDS / FOG)*
 
