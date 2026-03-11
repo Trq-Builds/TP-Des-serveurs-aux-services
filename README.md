@@ -2,7 +2,7 @@
 
 ---
 
-Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure matérielle des serveurs et la logique des services réseaux. Il couvre l'étude des facteurs de forme (Tour, Rack, Lame), la redondance matérielle, ainsi que la chaîne de services nécessaire à l'authentification d'un poste client sur un domaine.
+Ce dépôt regroupe les réponses et analyses du TD portant sury l'infrastructure matérielle des serveurs et la logique des services réseaux. Il couvre l'étude des facteurs de forme (Tour, Rack, Lame), la redondance matérielle, ainsi que la chaîne de services nécessaire à l'authentification d'un poste client sur un domaine.
 
 ---
 
@@ -244,5 +244,20 @@ mais **indispensables au fonctionnement quotidien** du poste.
 > **DHCP → DNS → Active Directory**
 > Un maillon cassé = **connexion impossible**. :
 
+
+---
+
+### 📊 Fiche récapitulative des serveurs (Q7)
+
+Ce tableau compare les configurations maximales extraites des documents techniques :
+
+| Caractéristique | Annexe 1 : T140 | Annexe 2 : T440 | Annexe 3 : R240 | Annexe 4 : M830 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Facteur de forme** | Tour | Tour | Rack (1U) | Lame (Blade) |
+| **Nb. Processeurs (max)** | 1 | 2 | 1 | 4 |
+| **Mémoire (max)** | 64 Go | 1 To | 64 Go | 3 To |
+| **Slots RAM** | 4 slots | 16 slots | 4 slots | 48 slots |
+| **Baies de stockage** | 4 baies (3.5") | 4, 8 ou 12 baies | 4 baies (3.5") | Jusqu'à 12 baies |
+| **Nb. Alimentations** | 1 (365W) | 2 (Redondantes) | 2 (Redondantes) | Via Châssis (Redon.) |
 
 ---
