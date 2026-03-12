@@ -1,5 +1,11 @@
 # 📘 TP B1-S2 : Des serveurs aux services
 
+![Training](https://img.shields.io/badge/Training-IT_Course-blue)
+![Type](https://img.shields.io/badge/Type-Travaux_Pratiques-success)
+![Servers](https://img.shields.io/badge/Infrastructure-Servers-blue)
+![Services](https://img.shields.io/badge/Focus-Network_Services-orange)
+![Linux](https://img.shields.io/badge/OS-Linux-FCC624?logo=linux&logoColor=black)
+
 ---
 
 Ce dépôt regroupe les réponses et analyses du TD portant sur l'infrastructure matérielle des serveurs et la logique des services réseaux. Il couvre l'étude des facteurs de forme (Tour, Rack, Lame), la redondance matérielle, ainsi que la chaîne de services nécessaire à l'authentification d'un poste client sur un domaine.
