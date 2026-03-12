@@ -3,8 +3,6 @@
 ![Training](https://img.shields.io/badge/Training-IT_Course-blue)
 ![Type](https://img.shields.io/badge/Type-Travaux_Pratiques-success)
 ![Servers](https://img.shields.io/badge/Infrastructure-Servers-blue)
-![Services](https://img.shields.io/badge/Focus-Network_Services-orange)
-![Linux](https://img.shields.io/badge/OS-Linux-FCC624?logo=linux&logoColor=black)
 
 ---
 
